@@ -6,7 +6,7 @@ import SearchIcon from './search.svg';
 
 // 4d861d85
 
-const API_URL = 'http://www.omdbapi.com?apikey=4d861d85';
+const API_URL = 'https://www.omdbapi.com?apikey=4d861d85';
 
 // const movie1 = {
 //     "Title": "The Amazing Spiderman 2 Webb Cut",
