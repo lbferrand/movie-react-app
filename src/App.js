@@ -7,6 +7,14 @@ import SearchIcon from './search.svg';
 
 const API_URL = 'http://www.omdbapi.com?apikey=4d861d85';
 
+const movie1 = {
+    "Title": "The Amazing Spiderman 2 Webb Cut",
+    "Year": "2021",
+    "imdbID": "tt18351128",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYzYzZDViNWYtNWViMS00NDMxLThlN2YtZjFkOWMwODkzNzhiXkEyXkFqcGdeQXVyMTUwMzM4NzU0._V1_SX300.jpg"
+}
+
 const App = () => {
 
   const searchMovies = async (title) => {
@@ -17,7 +25,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    searchMovies('Under the Tuscan Sun');
+    searchMovies('Spiderman');
   }, []);
 
   return (
@@ -32,8 +40,26 @@ const App = () => {
         />
         <img
           src={SearchIcon}
-          
+          alt='search'
+          onClick={() => {}}
         />
+      </div>
+      <div className='container'>
+        <div className='movie'>
+          <div>
+            <p>{movie1.Year}</p>
+          </div>
+
+          <div>
+            <img src={movie1.Poster !== 'N/A' ? movie1.Poster : 'https://via.placeholder.com/400'} alt={movie1.Title}/>
+          </div>
+
+          <div>
+            <span>{movie1.Type}</span>
+            <h3>{movie1.Title}</h3>
+          </div>
+          
+        </div>
       </div>
     </div>
   );
